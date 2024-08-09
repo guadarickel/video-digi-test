@@ -1,0 +1,103 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.header-video {
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+}
+
+.header-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+}
+
+.slider-container {
+    display: flex;
+    overflow-x: auto;
+    justify-content: center;
+    scroll-snap-type: x mandatory;
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    flex: 0 0 300px;
+    height: 400px;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    scroll-snap-align: start;
+    transition: transform 0.3s;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s;
+}
+
+.card video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card:hover img {
+    opacity: 0;
+}
+
+.card:hover video {
+    opacity: 1;
+}
+
+.carousel-inner {
+    width:100%;
+    max-height: 600px !important;
+  }
+
+.btn {
+    background-color: #F378C9 !important;
+    color: #fff;
+    display: inline-block;
+    align-content: left;
+     width: Hug (137px)px !important;
+    height: Hug (41px)px !important;
+    gap: 0px !important;
+    border-radius: 3px 0px 0px 0px !important;
+    border: 1px 0px 0px 0px !important;
+    opacity: 0px !important;
+    align-content: left !important;
+
+}
+
+.carousel-caption {
+    position: absolute;
+    left: -25%;
+    top: 75%
+}
